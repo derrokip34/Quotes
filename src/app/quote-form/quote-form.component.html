@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h2 style="text-align: center;">Create a new Quote</h2>
     <hr>
-    <form #quoeForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoeForm='ngForm'>
         <div class="form-group">
             <label for="name">Quote</label>
             <textarea rows="4" type="text" class="form-control" name="name" [(ngModel)]="newQuote.name" required></textarea>
