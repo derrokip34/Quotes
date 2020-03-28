@@ -15,6 +15,15 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete)
   }
 
+  countUp = 0
+  countDown = 0
+
+  upVote(quote){
+    quote.countUp = quote.countUp + 1;
+  }
+  downVote(quote) {
+    quote.countDown = quote.countDown + 1;
+  }
 
   constructor() { }
 
