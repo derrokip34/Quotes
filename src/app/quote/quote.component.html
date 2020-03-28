@@ -4,7 +4,7 @@
 <div class="card" *ngFor='let quote of quotes;let i = index'>
     <hr>
     <div class="card-title">
-        <p>{{quote.author|uppercase}}</p>
+        <p style="font-weight: bold;font-size: 25px;">{{quote.author|uppercase}}</p>
         <button (click)='toggleDetails(i)'>Quote details</button>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
