@@ -13,6 +13,10 @@ export class QuoteComponent implements OnInit {
     new Quote('My only regret is that I have only one life to give to my country', 'Nathan Hale', 'Chandler', new Date(2020,3,18))
   ]
 
+  toggleDetails(index: any) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
