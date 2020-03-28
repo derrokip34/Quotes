@@ -9,6 +9,8 @@
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>
-<div>
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<div class="row">
+    <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
 </div>
