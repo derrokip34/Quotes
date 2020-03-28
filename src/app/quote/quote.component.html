@@ -6,6 +6,6 @@
     <div class="card-title">
         <p>{{quote.author|uppercase}}</p>
         <button (click)='toggleDetails(i)'>Quote details</button>
-        <app-quote-details *ngIf='quote.showDetails' [quote]='quote'></app-quote-details>
+        <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>
