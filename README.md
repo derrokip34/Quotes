@@ -51,5 +51,5 @@ This is an angular app that allows a user to post, view, upvote and downvote a q
 To contact me you can reach me on my [email](derrickip34@gmail)
 
 ## License and copyright information
-[MIT License]
+[MIT License](https://github.com/derrokip34/Quotes/blob/master/license.md)
 
