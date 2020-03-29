@@ -4,12 +4,14 @@
 <div class="col-md-6 card" *ngFor='let quote of quotes;let i = index'>
     <hr>
     <div class="card-title">
-        <p style="font-weight: bold;font-size: 25px;">{{quote.author|uppercase}}</p>
-        <button (click)='toggleDetails(i)' class="btn-info">Quote details</button><br><br>
+        <p class="author">{{quote.author|uppercase}}</p>
         <div class="vote-buttons">
-            <button (click)="upVote(quote)" class="btn-primary">Upvote</button><br><br>
+            <button (click)="upVote(quote)" class="btn-primary">Upvote</button>
+            <p>Upvotes: {{quote.countUp}}</p>
             <button (click)="downVote(quote)" class="btn-warning">Downvote</button>
+            <p>Downvotes: {{quote.countDown}}</p>
         </div>
+        <button (click)='toggleDetails(i)' class="btn-info">Quote details</button>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>
