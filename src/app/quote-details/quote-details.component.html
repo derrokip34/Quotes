@@ -1,7 +1,9 @@
 <p>Quote: <span style="font-style: italic;">{{quote.name}}</span></p>
+
 <p>Posted by {{quote.poster}}, {{quote.datePosted|dateCount}} days ago</p>
-<button (click)= 'quoteDelete(true)' class="btn-danger">Delete Quote</button><br><br>
-<button (click)="upVote(quote)" class="btn-primary">Upvote</button>
+
 <p>Upvotes: {{quote.countUp}}</p>
-<button (click)="downVote(quote)" class="btn-warning">Downvote</button>
+
 <p>Downvotes: {{quote.countDown}}</p>
+
+<button (click)= 'quoteDelete(true)' class="btn-danger">Delete Quote</button>

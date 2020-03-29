@@ -5,7 +5,11 @@
     <hr>
     <div class="card-title">
         <p style="font-weight: bold;font-size: 25px;">{{quote.author|uppercase}}</p>
-        <button (click)='toggleDetails(i)' class="btn-info">Quote details</button>
+        <button (click)='toggleDetails(i)' class="btn-info">Quote details</button><br><br>
+        <div class="vote-buttons">
+            <button (click)="upVote(quote)" class="btn-primary">Upvote</button><br><br>
+            <button (click)="downVote(quote)" class="btn-warning">Downvote</button>
+        </div>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>
