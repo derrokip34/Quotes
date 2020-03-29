@@ -5,7 +5,7 @@
     <hr>
     <div class="card-title">
         <p style="font-weight: bold;font-size: 25px;">{{quote.author|uppercase}}</p>
-        <button (click)='toggleDetails(i)'>Quote details</button>
+        <button (click)='toggleDetails(i)' class="btn-info">Quote details</button>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>
