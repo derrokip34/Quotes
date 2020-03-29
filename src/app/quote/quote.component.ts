@@ -38,6 +38,22 @@ export class QuoteComponent implements OnInit {
   downVote(quote) {
     quote.countDown = quote.countDown + 1;
   }
+  
+  likedQuote: string;
+  likedAuthor: string;
+  likedPoster: string;
+  highestVotes = 0;
+
+  mostLikedQuote (){
+    for(let i=0; i<this.quotes.length; i++) {
+      if(this.quotes[i].countUp > this.highestVotes) {
+        this.highestVotes = this.quotes[i].countUp;
+        this.likedQuote = this.quotes[i].name;
+        this.likedAuthor = this.quotes[i].author;
+        this.likedPoster = this.quotes[i].poster;
+      }
+    }
+  }
 
   constructor() { }
 

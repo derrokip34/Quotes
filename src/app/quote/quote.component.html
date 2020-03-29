@@ -14,6 +14,15 @@
         <button (click)='toggleDetails(i)' class="btn-info">Quote details</button>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
+</div><br>
+<div class="upvotes">
+    <button class="btn btn-secondary" *ngIf='quotes.length > 0' (click)='mostLikedQuote()'>Quote with most Upvotes</button>
+    <div *ngIf='likedQuote && quotes.length > 0'>
+        <h3>Most liked quote</h3>
+        <p>Quote: {{likedQuote}}</p>
+        <p>Author: {{likedAuthor}}</p>
+        <p>Posted by {{likedPoster}}</p>
+    </div>
 </div>
 <div class="row">
     <div class="col-md-6">
