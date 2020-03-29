@@ -1,31 +1,31 @@
 <div class="jumbotron">
     <h1>QUOTES</h1>
 </div>
-<div class="col-md-6 card" *ngFor='let quote of quotes;let i = index'>
-    <hr>
-    <div class="card-title">
-        <p class="author">{{quote.author|uppercase}}</p>
-        <div class="vote-buttons">
-            <button (click)="upVote(quote)" class="btn-primary">Upvote</button>
-            <p>Upvotes: {{quote.countUp}}</p>
-            <button (click)="downVote(quote)" class="btn-warning">Downvote</button>
-            <p>Downvotes: {{quote.countDown}}</p>
+    <div class="col-md-7 card text-white bg-secondary mb-3" *ngFor='let quote of quotes;let i = index'>
+        <hr>
+        <div class="card-title">
+            <p class="author">{{quote.author|uppercase}}</p>
+            <div class="vote-buttons">
+                <button (click)="upVote(quote)" class="btn-primary">Upvote</button>
+                <p>Upvotes: {{quote.countUp}}</p>
+                <button (click)="downVote(quote)" class="btn-warning">Downvote</button>
+                <p>Downvotes: {{quote.countDown}}</p>
+            </div>
+            <button (click)='toggleDetails(i)' class="btn-info">Quote details</button>
+            <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
         </div>
-        <button (click)='toggleDetails(i)' class="btn-info">Quote details</button>
-        <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
-    </div>
-</div><br>
-<div class="upvotes">
-    <button class="btn btn-secondary" *ngIf='quotes.length > 0' (click)='mostLikedQuote()'>Quote with most Upvotes</button>
-    <div *ngIf='likedQuote && quotes.length > 0'>
-        <h3>Most liked quote</h3>
-        <p>Quote: {{likedQuote}}</p>
-        <p>Author: {{likedAuthor}}</p>
-        <p>Posted by {{likedPoster}}</p>
-    </div>
-</div>
+    </div><br>
+    <div class="upvotes col-md-6">
+        <button class="btn btn-secondary" *ngIf='quotes.length > 0' (click)='mostLikedQuote()'>Quote with most Upvotes</button>
+        <div *ngIf='likedQuote && quotes.length > 0' appHighlightQuote>
+            <h3>Most liked quote</h3>
+            <p>Quote: {{likedQuote}}</p>
+            <p>Author: {{likedAuthor}}</p>
+            <p>Posted by {{likedPoster}}</p>
+        </div>
+    </div><br><br>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
 </div>
