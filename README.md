@@ -1,27 +1,55 @@
-# Quotes
+# Quotes-App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+## Authors
+- [Derrick Kiprop](https://github.com/derrokip34)
 
-## Development server
+## Project Description
+This is an angular app that allows a user to post, view, upvote and downvote a quote
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup Instructions
+#### Prerequisites
+- A web browser
+- Github account
+- Terminal
 
-## Code scaffolding
+#### Clone this repository by typing the following command in the terminal
+`git clone https://github.com/derrokip34/Quotes/`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Navigate into the Quotes folder by typing the following command
+`cd Quotes`
 
-## Build
+#### Run ng serve in your terminal
+`ng serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Open http://localhost:4200/ on your web browser
 
-## Running unit tests
+## [Link to Quotes app](https://derrokip34.github.io/Quotes/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies used
+- HTML
+- TypeScript
+- CSS
+- Bootstrap
+- Markdown
+- Angular
 
-## Running end-to-end tests
+## BDD
+#### Input Required
+- User's quote
+- User's name
+- Quote's Author
+- Click upvote or downvote button
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Behaviour
+ The app will count the number of upvotes and downvotes for a quote
 
-## Further help
+ #### Output
+ - The app will display a new quote added by the user.
+- The app will also show the quote with most upvotes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contact Information
+To contact me you can reach me on my [email](derrickip34@gmail)
+
+## License and copyright information
+[MIT License]
+
