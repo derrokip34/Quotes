@@ -9,3 +9,6 @@ h1 {
 .upvotes {
     text-align: center;
 }
+.body {
+    margin: 30px;
+}
