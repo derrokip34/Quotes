@@ -23,8 +23,8 @@
     </div>
 </div><br>
 <div class="row">
-    <div class="upvotes col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 upvotes">
         <button class="btn btn-secondary" *ngIf='quotes.length > 0' (click)='mostLikedQuote()'>Quote with most Upvotes</button>
         <div *ngIf='likedQuote && quotes.length > 0' appHighlightQuote>
             <h3>Most liked quote</h3>
