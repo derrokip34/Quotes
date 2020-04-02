@@ -12,8 +12,7 @@ This is an angular app that allows a user to post, view, upvote and downvote a q
 - Github account
 - Terminal
 
-#### Clone this repository by typing the following command in the terminal
-`git clone https://github.com/derrokip34/Quotes/`
+#### Clone this repository
 
 #### Navigate into the Quotes folder by typing the following command
 `cd Quotes`
