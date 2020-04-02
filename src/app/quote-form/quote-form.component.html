@@ -4,19 +4,19 @@
     <form (ngSubmit)='submitQuote()' #quoeForm='ngForm'>
         <div class="form-group">
             <label for="name">Quote</label>
-            <textarea rows="4" type="text" class="form-control" name="name" [(ngModel)]="newQuote.name" required></textarea>
+            <textarea rows="4" type="text" class="form-control" name="name" [(ngModel)]="name" required></textarea>
         </div>
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" [(ngModel)]="newQuote.author" required>
+            <input type="text" class="form-control" name="author" [(ngModel)]="author" required>
         </div>
         <div class="form-group">
             <label for="poster">Name</label>
-            <input type="text" class="form-control" name="poster" [(ngModel)]="newQuote.poster" required>
+            <input type="text" class="form-control" name="poster" [(ngModel)]="poster" required>
         </div>
         <div class="form-group">
             <label for="datePosted">Date Posted</label>
-            <input type="date" class="form-control" name="datePosted" [(ngModel)]="newQuote.datePosted" required>
+            <input type="date" class="form-control" name="datePosted" [(ngModel)]="datePosted" required>
         </div>
         <button type="submit" class="btn btn-success">Add Quote</button>
     </form>
