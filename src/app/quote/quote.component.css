@@ -14,4 +14,11 @@ h1 {
 }
 .quotes {
     padding-left: 20px;
+    text-align: left;
+}
+.quotename {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
 }

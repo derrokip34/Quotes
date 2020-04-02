@@ -9,6 +9,7 @@
                 <div class="card-title">
                     <p class="author">{{quote.author|uppercase}}</p>
                 </div>
+                    <p><span class="quotename">{{quote.name}}</span></p>
                     <div class="vote-buttons">
                         <button (click)="upVote(quote)" class="btn-primary">Upvote</button>
                         <p>Upvotes: {{quote.countUp}}</p>
