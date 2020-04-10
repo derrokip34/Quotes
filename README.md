@@ -18,7 +18,7 @@ This is an angular app that allows a user to post, view, upvote and downvote a q
 `cd Quotes`
 
 #### Download the dependencies by typing the following command
-`npm install -g @angular/cli`
+`npm install`
 
 #### Run ng serve in your terminal
 `ng serve`
